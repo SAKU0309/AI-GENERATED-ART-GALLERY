@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>sign-in</title>
+    <style>
+        body {
+            
+            background-color:plum; 
+            font-family: Arial, sans-serif;
+        }
+
+        .sign-in-box {
+           
+            max-width: 400px;
+            margin: 100px auto;
+            background-color: #d8c9e6; 
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .sign-in-box label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .sign-in-box input[type="text"],
+        .sign-in-box input[type="number"],
+        .sign-in-box input[type="email"] {
+            width: calc(100% - 10px);
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #fff; 
+        }
+
+        .sign-in-box input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4c77af;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="sign-in-box">
+    <center><h1><u>Sign In</u></h1></center><hr>
+    <form id="signin-form" action="/submit_signin" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        
+       <center> <input type="submit" value="Submit" onclick="signIn()"></center>
+    </form>
+</div>
+    
+    <script>
+    function redirectToPreviousPage() {
+        
+        let name = document.getElementById('name').value.trim();
+        let age = document.getElementById('age').value.trim();
+        let email = document.getElementById('email').value.trim();
+
+        // Check if any field is empty
+        if (name === '' || age === '' || email === '') {
+            alert("Please fill in all the fields to sign in!");
+            return false; // Prevent form submission
+        } else{
+    alert("You have successfully signed in")
+   }}
+   
+   document.getElementById('signin-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        alert("You have successfully signed in");
+        window.location.href = "index.html"; })
+
+</script>
+</body>
+</html>

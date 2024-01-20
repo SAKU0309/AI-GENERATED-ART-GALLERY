@@ -1,0 +1,115 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(rgba(0,8,51,0.7),rgba(0,8,51,0.7)),url(7.jpeg);
+   } 
+
+h1{
+    text-align: center;
+    margin: 100px auto 50px;
+    font-weight:600 ;
+    color: #b2afea;
+    font-style: normal;
+    font-family: "https://fonts.googleapis.com/css2?family=Nova+Square&family=Poppins&display=swap" rel="stylesheet";
+}
+
+form{
+    width:80%;
+    max-width: 700px;
+    margin: auto;
+    height: 60%;
+    background: rgba(225,225, 225,0.2) ;
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px;
+    backdrop-filter: blur(4px) saturate(180%);
+}
+
+form input{
+    flex:1;
+    height: 100%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: #cac7ff;
+    font-size: 18px;
+    padding: 0 30px;
+}
+.backbutton {
+    max-height: 50px;
+    max-width: 50px;
+}
+button{
+    border: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: #58629b;
+    cursor: pointer;
+}
+
+::placeholder{
+    color: #cac7ff;
+}
+
+.search-results{
+    display:flex ;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.search-result{
+    margin-bottom: 60px;
+    width: 30%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.2);
+    overflow: hidden;
+    margin-top: 60px;
+}
+
+.search-result img{
+object-fit: cover;
+transition: opacity 0.2s ease-in-out;
+}
+
+.search-result:hover img{
+    opacity: 0.8;
+}
+
+#show-more-button{
+    border: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: #58629b;
+    cursor: pointer;
+    text-align: center;
+    font-size: 12px;
+    padding: 10px 20px;
+    display: block;
+    margin: 30px auto;
+    display: none ;
+}
+
+@media screen and (max-width:768px){
+    .search-results{
+        padding: 20px;
+    }
+    .search-result{
+        width: 45%;
+    }
+}
+
+@media screen and (max-width:480px){
+    .search-result{
+        width: 100%;
+    }
+}
