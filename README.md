@@ -43,8 +43,9 @@ AI-Generated-Art-Gallery/
 ├── index.html                # Main HTML page
 ├── README.md                 # Documentation
 └── LICENSE                   # License information
+```
+## Installation
 
-Installation
 Step 1.git clone https://github.com/SAKU0309/AI-Generated-Art-Gallery.git
 Step 2.cd AI-Generated-Art-Gallery
 Step 3.go to index.html and open with live server
